@@ -1,0 +1,54 @@
+@import 'src/styles/styles.scss';
+
+.container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.content {
+  padding: 20px 20px 0 20px;
+  background-color: white;
+  border: 1px solid $blue-100;
+  width: 40%;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.iptFields {
+  @include iptfields;
+
+  input {
+    margin-bottom: 15px;
+  }
+
+  margin-bottom: 20px;
+}
+
+
+.btnContainer {
+  display: flex;
+  justify-content: flex-end
+}
+
+.alertBox {
+  border: 1px solid red;
+  border-radius: 5px;
+  color: red;
+  display: flex;
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  align-items: center;
+  margin-bottom: 20px;
+
+  span {
+    font-size: 1rem;
+    margin-right: 5px;
+  }
+}

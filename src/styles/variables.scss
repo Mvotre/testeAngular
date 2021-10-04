@@ -1,0 +1,32 @@
+// Colors
+
+$blue-100: mix(white, #23275C, 80%) ;
+$blue-300: mix(white, #23275C, 55%) ;
+$blue-500: mix(white, #23275C, 30%) ;
+$blue-700: #23275C; // Logo 
+$blue-900: mix(black, #23275C, 30%) ;
+
+$yellow-100: mix(white, #F3CA40, 80%) ;
+$yellow-300: mix(white, #F3CA40, 55%) ;
+$yellow-500: #F3CA40;
+$yellow-700: mix(black, #F3CA40, 20%) ;
+$yellow-900: mix(black, #F3CA40, 40%) ;
+
+$green-100: mix(white, #79B791, 80%) ;
+$green-300: mix(white, #79B791, 55%) ;
+$green-500: #79B791;
+$green-700: mix(black, #79B791, 20%) ;
+$green-900: mix(black, #79B791, 40%) ;
+
+$darkgreen-100: mix(white, #474B24, 80%) ;
+$darkgreen-300: mix(white, #474B24, 55%) ;
+$darkgreen-500: #474B24;
+$darkgreen-700: mix(black, #474B24, 20%) ;
+$darkgreen-900: mix(black, #474B24, 40%) ;
+
+$sienna-100: mix(white, #CA895F, 80%) ;
+$sienna-300: mix(white, #CA895F, 55%) ;
+$sienna-500: #CA895F;
+$sienna-700: mix(black, #CA895F, 20%) ;
+$sienna-900: mix(black, #CA895F, 40%) ;
+

@@ -1,0 +1,10 @@
+@import 'src/styles/styles.scss';
+
+.main {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  background-color: $blue-900;
+  color: white;
+}

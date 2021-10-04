@@ -1,0 +1,14 @@
+@import 'src/styles/styles.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.areaConteudo {
+  flex-grow: 2;
+  background-image: linear-gradient(to bottom right, white, $blue-100);
+}

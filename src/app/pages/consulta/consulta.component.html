@@ -1,0 +1,82 @@
+<section class="container">
+  <div class="content">
+    <h3> Consulta de produtos </h3>
+
+    <div class="content__body">
+      <div class="filterSection">
+        
+        <h4>Pesquisar:</h4>
+        <div class="filterSection__ipts">
+          <div>
+            <label> Código: </label>
+            <input type="number" placeholder="Código" (keyup)="onType($event)">
+          </div>
+  
+          <div>
+            <label> Categoria: </label>
+            <select (change)="onChange($event)">
+              <option value="todos"> Todos </option>
+              <option value="atacado"> Atacado </option>
+              <option value="varejo"> Varejo </option>
+              <option value="internacional"> Internacional </option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class='tableContainer'> 
+        <table *ngIf='!zeroResults'>
+          <thead>
+            <th> Código </th>
+            <th> Nome </th>
+            <th> Categoria </th>
+          </thead>
+          <tbody #tableBody>
+            <tr *ngFor="let row of filterableList, let i = index" (click)="selectRow(i)">
+              <td *ngFor="let column of row"> {{ column }} </td>
+            </tr>
+          </tbody>
+        </table>
+        <p *ngIf='zeroResults'> Nenhum resultado encontrado </p>
+      </div>
+
+      <div class="controlArea"> 
+        <button (click)="delete()" class="deleteBtn" [class.disabled]="!selectedId"> 
+          Excluir produto 
+          <span class="material-icons"> cancel </span>
+        </button>
+
+        <button (click)=edit() class="editBtn" [class.disabled]="!selectedId"> 
+          Editar cadastro 
+          <span class="material-icons"> create </span>
+        </button>
+
+        <button (click)="openNew()" class="newBtn"> 
+          Novo cadastro 
+          <span class="material-icons"> add_circle </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="modal" *ngIf="modal">
+    <div class="modal__container">
+      <span class="material-icons wngIcon">
+        announcement
+      </span>
+      <div>
+        <p> Tem certeza que deseja excluir o produto?</p>
+        <div class="buttonContainer">
+          <button class="deleteBtn" (click)="closeModal()">
+            Cancelar 
+            <span class="material-icons"> cancel </span>
+          </button>
+
+          <button class="newBtn" (click)="deleteModal()"> 
+            Confirmar 
+            <span class="material-icons"> check_circle </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

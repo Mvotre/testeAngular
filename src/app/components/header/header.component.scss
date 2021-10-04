@@ -1,0 +1,34 @@
+@import 'src/styles/styles.scss';
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: 2px solid $blue-700;
+
+  img {
+    width: 10%;
+    margin: 15px;
+  }
+}
+
+.menuItens {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  transition: all 0.2s;
+  margin-right: 20px;
+
+  &:hover {
+    background-color: $blue-100;
+    cursor: pointer;
+
+    span {
+      color: $blue-900;
+    }
+  }
+
+  span {
+    color: $blue-700;
+  }
+}

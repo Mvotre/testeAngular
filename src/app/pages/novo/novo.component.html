@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="content">
+    <h3> {{ title }} </h3>
+
+    <form [formGroup]="formNovo" (ngSubmit)="onSubmit()" class="formContainer iptFields">
+      <input type="number" placeholder="Código" formControlName ="codigo">
+  
+      <input type="text" placeholder="Nome" formControlName ="nome">
+      <select formControlName ="categoria" class="iptFields">
+        <option value="Atacado"> Atacado </option>
+        <option value="Varejo"> Varejo </option>
+        <option value="Internacional"> Internacional </option>
+      </select> 
+
+      <div class="alertBox" *ngIf="codeValidation">
+        <span class="material-icons">
+          report_problem
+          </span>
+        <p> Código já existente! </p>
+      </div>
+
+      <div class="btnContainer">
+        <button (click)="return()" class="deleteBtn"> 
+          Cancelar 
+          <span class="material-icons"> cancel </span>
+        </button>
+
+        <button type="submit" class="newBtn" [disabled]="!formNovo.valid"> 
+          Salvar 
+          <span class="material-icons"> add_circle </span>
+        </button>
+      </div>
+    </form>
+  </div> 
+</div>
